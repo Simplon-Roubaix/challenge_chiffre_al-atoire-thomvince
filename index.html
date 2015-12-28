@@ -34,9 +34,12 @@
                 </p>
             <hr>
             <p>
-                Tapez votre chiffre : <input type="text" id="champschiffre">
-            <button type="button" name="commencez">Commencez</button>
+                Tapez votre chiffre : <input type="text" id="champschiffre" placeholder="Saisissez un nombre">
+            <button type="button" id="commencez" name="commencez" class="commencez">Commencez</button>
             </p>
+            <div id="resultat">
+                Ici, des indices !
+            </div>
         </section>
 
 
@@ -49,6 +52,25 @@
         <script src="js/main.js"></script>
 
         <script>
+        var champschiffre = document.getElementById("champschiffre");
+        var bouton = document.getElementById("commencez");
+        var resultat = document.getElementById("resultat");
+        var reponse = Math.ceil(Math.random() * 30)
+        function verifier() {
+          if (champschiffre.value < reponse) {
+            resultat.innerHTML = "Trop petit !";
+          }
+          if (champschiffre.value == reponse) {
+            resultat.innerHTML = "Excellent !";
+          }
+          if (champschiffre.value > reponse) {
+            resultat.innerHTML = "Trop grand !";
+          }
+        }
+
+        bouton.onclick = verifier;
+
+
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
