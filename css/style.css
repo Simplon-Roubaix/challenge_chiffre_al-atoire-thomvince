@@ -8,6 +8,34 @@ h3 {
     margin-top: 100px;
     margin-bottom: 40px;
 }
+p {
+    text-align: center;
+}
 #resultat {
- 
+font-weight: bold;
+background-color: #3EBEFF;
+text-align: center;
+margin-top: 50px;
+padding: 50px;
+margin-left: 650px;
+margin-right: 650px;
+border: 1px solid black;
+
+}
+button {
+  border: 0;
+  background: #FF5766;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #A83A44;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .05s linear;
+}
+button:active {
+  box-shadow: 0 2px 0 #A83A44;
+  transform: translateY(3px);
 }
